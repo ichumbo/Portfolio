@@ -1510,3 +1510,21 @@ textarea.input-field {
   }
 
 }
+
+@media only screen and (max-width: 780px) {
+  .img-resp {
+    position: relative;
+    left: -190px;
+    width: 940px;
+    top: -70px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .img-resp {
+    position: relative;
+    left: -190px;
+    width: 940px;
+    top: -70px;
+  }
+}
