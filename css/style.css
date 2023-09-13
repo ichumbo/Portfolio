@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6222CC;
+    --primary: #337CCF;
     --secondary: #FBA504;
     --light: #F6F4F9;
     --dark: #04000B;
@@ -211,7 +211,7 @@ h6,
 /*** Hero Header ***/
 .hero-header {
     margin-bottom: 6rem;
-    padding: 18rem 0;
+    padding: 10rem 0 18rem 0;
     background:
         url(../img/blob-top-left.png),
         url(../img/blob-top-right.png),
@@ -227,6 +227,12 @@ h6,
         center center,
         center bottom;
     background-repeat: no-repeat;
+}
+
+.hero-img-about {
+    width: 400px;
+    margin-left: 90px;
+    border-radius: 8px;
 }
 
 @media (max-width: 991.98px) {
@@ -435,7 +441,7 @@ h6,
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(98, 34, 204, .9);
+    background: #337CCF;
     transition: .5s;
     opacity: 0;
 }
