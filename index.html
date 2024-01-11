@@ -2,640 +2,1348 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <title>iChumbo - Portifólio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <!-- 
+    - primary meta tags
+  -->
+  <title>iChumbo</title>
+  <meta name="title" content="Portfólio iChumbo">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
+  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Carregando...</span>
-            </div>
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" target="_blank" class="logo">
+        <img src="./assets/images/logo.png" width="120" height="70" alt="iChumbo logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" target="_blank" class="logo">
+            <img src="./assets/images/logo.png" width="120" height="37" alt="iChumbo logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
         </div>
-        <!-- Spinner End -->
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Sites</a>
+          </li>
+
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Meus Projetos</a>
+          </li>
+
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Últimos Trabalhos</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="./assets/curriculo.pdf" target="_blank" class="btn btn-primary" download>Currículo</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0">iChumbo</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Olá pessoal!</p>
+
+            <h1 class="headline headline-1 section-title">
+              Sou o <span class="span">Ian Melo</span>
+            </h1>
+
+            <p class="hero-text">
+              Sou um desenvolvedor apaixonado por criar sites limpos com recursos intuitivos. Funcionalidades. Gosto do
+              processo de transformar ideias em realidade usando soluções criativas. Estou sempre curioso para aprender
+              novas habilidades, ferramentas e conceitos.
+            </p>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email_address" placeholder="Digite seu nome" required class="input-field"
+                autocomplete="off">
+
+              <button class="btn btn-primary">
+                <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5521977188050" target="_blank">Contato</a>
+
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/hero-banner.png" width="327" height="490" alt="Wren Clark" class="w-100">
+
+            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+
+            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+
+          </div>
+
+          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+
+          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TOPICS
+      -->
+
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+
+          <div class="card topic-card">
+
+            <div class="card-content">
+
+              <h2 class="headline headline-2 section-title card-title" id="topic-label">
+                Projetos Online
+              </h2>
+
+              <p class="card-text">
+                Alguns dos projetos que tive o prazer de desenvolver e hoje estão em funcionalidade.
+              </p>
+
+              <div class="btn-group">
+                <button class="btn-icon" aria-label="previous" data-slider-prev>
+                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">Sobre</a>
-                        <a href="service.html" class="nav-item nav-link">Serviços</a>
-                        <a href="project.html" class="nav-item nav-link">Projetos</a>
-                        <a href="contact.html" class="nav-item nav-link">Contato</a>
+
+                <button class="btn-icon" aria-label="next" data-slider-next>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+
+            </div>
+
+            <div class="slider" data-slider>
+              <ul class="slider-list" data-slider-container>
+
+                <li class="slider-item">
+                  <a href="https://solbikes.com.br" class="slider-card" target="_blank">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="./assets/images/topic-1.jpg" width="507" height="618" loading="lazy" alt="Sport"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">SolBikes</span>
+
+                      <p class="slider-subtitle">E-commerce</p>
                     </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Veja Mais</a>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="https://cexito.com.br" class="slider-card" target="_blank">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="./assets/images/topic-2.jpg" width="507" height="618" loading="lazy" alt="Travel"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">cÊxito</span>
+
+                      <p class="slider-subtitle">Site de Ensino</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="https://skylandorlando.com" class="slider-card" target="_blank">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="./assets/images/topic-3.jpg" width="507" height="618" loading="lazy" alt="Design"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Skyland Orlando</span>
+
+                      <p class="slider-subtitle">Site de Hospedagem</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="https://www.lunetterie.com.br" class="slider-card" target="_blank">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="./assets/images/topic-4.jpg" width="507" height="618" loading="lazy" alt="Movie"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Luneterrie</span>
+
+                      <p class="slider-subtitle">E-commerce</p>
+                    </div>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURED POST
+      -->
+
+      <section class="section feature" aria-label="feature" id="featured">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Meus Projetos</span>
+          </h2>
+
+          <p class="section-text">
+            Aqui estão alguns dos meus projetos para melhor visualização.
+          </p>
+
+          <ul class="feature-list">
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/featured-1.png" width="1602" height="903" loading="lazy"
+                    alt="Ridex é uma loja para aluguel de carro totalmente responsivo" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="https://ichumbo-ridex.netlify.app" class="span hover-2" target="_blank">Ridex é uma loja
+                        para aluguel de carro, ele é totalmente responsivo, para celulares, tablets e computadores.</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2023</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://ichumbo-ridex.netlify.app" class="card-title hover-2" target="_blank">
+                      Ridex
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/author-1.jpg" width="48" height="48" loading="lazy"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">iChumbo</p>
+
+                        <p class="card-subtitle">23 Set 2023</p>
+                      </div>
+                    </div>
+
+                    <a href="https://ichumbo-ridex.netlify.app" class="card-btn" target="_blank">Veja Mais</a>
+
+                  </div>
+
                 </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/featured-3.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="https://ichumbo-dentelo.netlify.app" target="_blank" class="span hover-2">Dentelo é um
+                        site odontológico, ele é totalmente responsivo, para celulares, tablets e computadores.</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2023</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://ichumbo-dentelo.netlify.app" target="_blank" class="card-title hover-2">
+                      Dentelo
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/author-1.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">iChumbo</p>
+
+                        <p class="card-subtitle">25 Jun 2023</p>
+                      </div>
+                    </div>
+
+                    <a href="https://ichumbo-dentelo.netlify.app" target="_blank" class="card-btn">Veja Mais</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/featured-2.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="https://ichumbo-eduweb.netlify.app" class="span hover-2" target="_blank">EduWeb é um site
+                        de
+                        educação, ele é totalmente responsivo, para celulares, tablets e computadores.</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2023</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://ichumbo-eduweb.netlify.app" class="card-title hover-2" target="_blank">
+                      EduWeb
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/author-1.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">iChumbo</p>
+
+                        <p class="card-subtitle">10 Jul 2023</p>
+                      </div>
+                    </div>
+
+                    <a href="https://ichumbo-eduweb.netlify.app" class="card-btn" target="_blank">Veja Mais</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/featured-5.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="https://ichumbo-eduland.netlify.app" target="_blank" class="span hover-2">EduLand é um
+                        site de educação, ele é totalmente responsivo, para celulares, tablets e computadores.</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2023</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://ichumbo-eduland.netlify.app" target="_blank" class="card-title hover-2">
+                      EduLand
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/author-1.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">iChumbo</p>
+
+                        <p class="card-subtitle">05 Jan 2023</p>
+                      </div>
+                    </div>
+
+                    <a href="https://ichumbo-eduland.netlify.app" target="_blank" class="card-btn">Veja Mais</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="./assets/images/featured-4.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="https://ichumbo-landio.netlify.app" target="_blank" class="span hover-2">Landio é uma
+                        landing page, ele é totalmente responsivo, para celulares, tablets e computadores.</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2022</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="https://ichumbo-landio.netlify.app" target="_blank" class="card-title hover-2">
+                      Landio
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="./assets/images/author-1.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">iChumbo</p>
+
+                        <p class="card-subtitle">15 Set 2022</p>
+                      </div>
+                    </div>
+
+                    <a href="https://ichumbo-landio.netlify.app" target="_blank" class="card-btn">Veja Mais</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="https://www.linkedin.com/in/ichumbo/details/projects/" target="_blank" class="btn btn-secondary">
+            <span class="span">Veja mais</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #POPULAR TAGS
+      -->
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Habilidades Especiais</span>
+          </h2>
+
+          <p class="section-text">
+            As linguagens a baixo são as que eu mais uso em projetos e trabalhos, as linguagens em que mais me
+            especializei.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tag1.png" width="32" height="32" loading="lazy" alt="Travel">
+
+                <p class="btn-text">JavaScript</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tag2.png" width="32" height="32" loading="lazy" alt="Culture">
+
+                <p class="btn-text">CSS</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
+
+                <p class="btn-text">React</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tag4.png" width="32" height="32" loading="lazy" alt="Fashion">
+
+                <p class="btn-text">WordPress</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tag6.png" width="32" height="32" loading="lazy" alt="Space">
+
+                <p class="btn-text">Bootstrap</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="./assets/images/tag12.png" width="32" height="32" loading="lazy" alt="Business">
+
+                <p class="btn-text">TypeScript</p>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RECENT POST
+      -->
+
+      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
+        <div class="container">
+
+          <div class="post-main">
+
+            <h2 class="headline headline-2 section-title">
+              <span class="span">Mais Projetos</span>
+            </h2>
+
+            <p class="section-text">
+              Esses templates a baixo são alguns projetos pessoais que eu mesmo desenvolvi.
+            </p>
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-1.png" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://ichumbo-tourtly.netlify.app" target="_blank" class="card-badge">Site de Viagem</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://ichumbo-tourtly.netlify.app" target="_blank" class="link hover-2">Tourly</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Tourly é um site para reserva e viagem, nele botei algumas funcionalidades na qual vi em outros
+                      sites, ele é totalmente responsivo, para celulares, tablets e computadores.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="https://ichumbo-tourtly.netlify.app" target="_blank" class="span hover-2">#HTML</a>
+
+                        <a href="https://ichumbo-tourtly.netlify.app" target="_blank" class="span hover-2">#CSS</a>
+
+                        <a href="https://ichumbo-tourtly.netlify.app" target="_blank" class="span hover-2">#JAVASCRIPT</a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-2.png" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://ichumbo-blogy.netlify.app" target="_blank" class="card-badge">Site de Blog</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://ichumbo-blogy.netlify.app" target="_blank" class="link hover-2">Blogy</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Blogy é um site com ideia de um blogy pessoal, ele é totalmente responsivo, para celulares, tablets e computadores.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="https://ichumbo-blogy.netlify.app" target="_blank" class="span hover-2">#HTML</a>
+
+                        <a href="https://ichumbo-blogy.netlify.app" target="_blank" class="span hover-2">#CSS</a>
+
+                        <a href="https://ichumbo-blogy.netlify.app" target="_blank" class="span hover-2">#JAVASCRIPT</a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-3.png" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://ichumbo-funel.netlify.app" target="_blank" class="card-badge">Site de Agência</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://ichumbo-funel.netlify.app" target="_blank" class="link hover-2">Funel</a>
+                    </h3>
+
+                    <p class="card-text">
+                     Funel é um site de agência, ele é totalmente responsivo, para celulares, tablets e computadores.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="https://ichumbo-funel.netlify.app" target="_blank" class="span hover-2">#HTML</a>
+
+                        <a href="https://ichumbo-funel.netlify.app" target="_blank" class="span hover-2">#CSS</a>
+
+                        <a href="https://ichumbo-funel.netlify.app" target="_blank" class="span hover-2">#JAVASCRIPT</a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-4.png" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://ichumbo-sceo.netlify.app" target="_blank" class="card-badge">Site de Agência</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://ichumbo-sceo.netlify.app" target="_blank" class="link hover-2">SCEO</a>
+                    </h3>
+
+                    <p class="card-text">
+                      SCEO é um site de agência, ele é totalmente responsivo, para celulares, tablets e computadores.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="https://ichumbo-sceo.netlify.app" target="_blank" class="span hover-2">#HTML</a>
+
+                        <a href="https://ichumbo-sceo.netlify.app" target="_blank" class="span hover-2">#CSS</a>
+
+                        <a href="https://ichumbo-sceo.netlify.app" target="_blank" class="span hover-2">#JAVASCRIPT</a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="./assets/images/recent-post-5.png" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="https://ichumbo-micro.netlify.app" target="_blank" class="card-badge">Site de Posdcast</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="https://ichumbo-micro.netlify.app" target="_blank" class="link hover-2">Micro - Podcast</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Micro é um site de Podcast, ele é totalmente responsivo, para celulares, tablets e computadores.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="https://ichumbo-micro.netlify.app" target="_blank" class="span hover-2">#HTML</a>
+
+                        <a href="https://ichumbo-micro.netlify.app" target="_blank" class="span hover-2">#CSS</a>
+
+                        <a href="https://ichumbo-micro.netlify.app" target="_blank" class="span hover-2">#JAVASCRIPT</a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <nav aria-label="pagination" class="pagination-1">
+
+              <a href="https://www.linkedin.com/in/ichumbo/details/projects/" target="_blank" class="btn btn-secondary">
+                <span class="span">Veja mais</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
             </nav>
 
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-end">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">Transformando suas ideias em realidade.</h1>
-                            <p class="text-white pb-3 animated slideInDown">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
-                            <a href="" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Mais Informações</a>
-                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contate-me</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="img/hero-banner-sm.png" alt="">
-                        </div>
+          </div>
+
+          <div class="post-aside grid-list">
+
+            <div class="card aside-card">
+
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Formação</span>
+              </h3>
+
+              <ul class="popular-list">
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="./assets/images/popular-post-1.jpg" width="64" height="64" loading="lazy"
+                         class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="link hover-2">Engenharia da Computação</a>
+                      </h4>
+                      
+                      <div>
+                        <p class="card-subtitle">IBMR - Graduação</p>
+                      </div>
+                      
+                      <div class="warpper">
+                        <time class="publish-date" datetime="2023">2023 - 2028</time>
+                      </div>
+
                     </div>
-                </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="./assets/images/popular-post-1.jpg" width="64" height="64" loading="lazy"
+                         class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="link hover-2">Análise e desenvolvimento de sistemas</a>
+                      </h4>
+                      
+                      <div>
+                        <p class="card-subtitle">IBMR - Tecnólogo</p>
+                      </div>
+                      
+                      <div class="warpper">
+                        <time class="publish-date" datetime="2023">2023 - 2025</time>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
             </div>
+
+            <div class="post-aside grid-list">
+
+              <div class="card aside-card">
+  
+                <h3 class="headline headline-2 aside-title">
+                  <span class="span">Experiências Profissionais</span>
+                </h3>
+  
+                <ul class="popular-list">
+  
+                  <li>
+                    <div class="popular-card">
+  
+                      <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                        <img src="./assets/images/popular-post-2.png" width="64" height="64" loading="lazy"
+                           class="img-cover">
+                      </figure>
+  
+                      <div class="card-content">
+  
+                        <h4 class="headline headline-4 card-title">
+                          <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="link hover-2">Desenvolvedor Front-End</a>
+                        </h4>
+                        
+                        <div>
+                          <p class="card-subtitle">Genium - PJ</p>
+                        </div>
+                        
+                        <div class="warpper">
+                          <time class="publish-date" datetime="2023">2021 - 2023</time>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+                  </li>
+  
+                  <li>
+                    <div class="popular-card">
+  
+                      <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                        <img src="./assets/images/popular-post-2.png" width="64" height="64" loading="lazy"
+                           class="img-cover">
+                      </figure>
+  
+                      <div class="card-content">
+  
+                        <h4 class="headline headline-4 card-title">
+                          <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="link hover-2">Desenvolvedor Front-End</a>
+                        </h4>
+                        
+                        <div>
+                          <p class="card-subtitle">Enota - PJ</p>
+                        </div>
+                        
+                        <div class="warpper">
+                          <time class="publish-date" datetime="2023">2023 - 2024</time>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="popular-card">
+  
+                      <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                        <img src="./assets/images/popular-post-2.png" width="64" height="64" loading="lazy"
+                           class="img-cover">
+                      </figure>
+  
+                      <div class="card-content">
+  
+                        <h4 class="headline headline-4 card-title">
+                          <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="link hover-2">Desenvolvedor Front-End</a>
+                        </h4>
+                        
+                        <div>
+                          <p class="card-subtitle">OliverSoftware - PJ</p>
+                        </div>
+                        
+                        <div class="warpper">
+                          <time class="publish-date" datetime="2023">2021 - 2023</time>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+                  </li>
+  
+                </ul>
+  
+              </div>
+
+            <div class="card aside-card">
+
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Parceiros Programadores</span>
+              </h3>
+
+              <ul class="comment-list">
+
+                <li>
+                  <div class="comment-card">
+
+                    <h4 class="headline headline-4 card-title">
+                      <a href="https://www.linkedin.com/in/leonardo-onofre-b80aab136/" target="_blank" class="link hover-2">Desenvolvedor Back-End Sênior</a>
+                    </h4>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="./assets/images/parc-1.jpg" width="32" height="32" loading="lazy" alt="Leonardo">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Leonardo Onofre</p>
+                        <a href="https://www.linkedin.com/in/leonardo-onofre-b80aab136/" target="_blank" class="card-date-1">Veja Mais</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card">
+
+                    <h4 class="headline headline-4 card-title">
+                      <a href="https://www.linkedin.com/in/emanuel-castro-643515202/" target="_blank" class="link hover-2">Desenvolvedor Back-End</a>
+                    </h4>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="./assets/images/parc-3.jpg" width="32" height="32" loading="lazy" alt="Emanuel">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Emanuel Castro</p>
+                        <a href="https://www.linkedin.com/in/emanuel-castro-643515202/" target="_blank" class="card-date-1">Veja Mais</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card">
+
+                    <h4 class="headline headline-4 card-title">
+                      <a href="https://www.linkedin.com/in/mizaelima275/" target="_blank" class="link hover-2">Desenvolvedor Back-End</a>
+                    </h4>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="./assets/images/parc-2.jpg" width="32" height="32" loading="lazy" alt="Mizael">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Mizael Lima</p>
+                        <a href="https://www.linkedin.com/in/mizaelima275/" target="_blank" class="card-date-1">Veja Mais</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card">
+
+                    <h4 class="headline headline-4 card-title">
+                      <a href="https://www.linkedin.com/in/eduardo-prates-da-cunha/" target="_blank" class="link hover-2">Desenvolvedor Full-Stack</a>
+                    </h4>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="./assets/images/parc-4.jpg" width="32" height="32" loading="lazy" alt="Eduardo">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Eduardo Prates</p>
+                        <a href="https://www.linkedin.com/in/eduardo-prates-da-cunha/" target="_blank" class="card-date-1">Veja Mais</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!--
+            <div class="card aside-card insta-card">
+
+              <a href="#" target="_blank" class="logo">
+                <img src="./assets/images/logo.png" width="140" height="37" loading="lazy" alt="Wren logo">
+              </a>
+
+              <p class="card-text">
+                Visite mais projetos meus!
+              </p>
+
+              <ul class="insta-list">
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-1.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-2.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-3.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-4.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-5.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-6.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-7.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-8.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" target="_blank" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="./assets/images/insta-post-9.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          -->
+
+          </div>
         </div>
-        <!-- Navbar & Hero End -->
+      </section>
 
+    </article>
+  </main>
 
-        <!-- Feature Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                            <h5 class="mb-3">Front-End</h5>
-                            <p class="m-0">Responsável por desenvolver por meio do código uma interface gráfica e, normalmente, com as tecnologias base da Web: HTML, CSS e JavaScript.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
-                            <h5 class="mb-3">Designer Gráfico</h5>
-                            <p class="m-0">Faço a produção logotipo, imagens, textos, diagramações, animações e infográficos que busca transformar uma ideia em algo visual e chamativo.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
-                            <h5 class="mb-3">Desenvolvimento Web</h5>
-                            <p class="m-0">Criação, codificação e programação de sites e seus respectivos elementos e linguagens.Estrutuação de cada detalhe de uma página da internet.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Feature End -->
+  <!-- 
+        - #POPULAR TAGS
+      -->
 
+  <section class="tags" aria-labelledby="tag-label">
+    <div class="container">
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="section-title text-secondary">Sobre Mim<span></span></p>
-                        <h1 class="mb-5">Front-End Developer & Designer</h1>
-                        <p class="mb-4">Ei! Meu nome é Ian e sou um desenvolvedor apaixonado por criar sites limpos com recursos intuitivos. Funcionalidades. Gosto do processo de transformar ideias em realidade usando soluções criativas. Estou sempre curioso para aprender novas habilidades, ferramentas e conceitos. Além de trabalhar em vários projetos, trabalhei com equipes criativas, o que envolve reuniões diárias e comunicações, controle de fontes e gerenciamento de projetos.</p>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Web Site</p>
-                                <p class="mb-2">100%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Designer</p>
-                                <p class="mb-2">83%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Desenvolvedor Web</p>
-                                <p class="mb-2">95%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Mais Informações</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn hero-img-about" data-wow-delay="0.5s" src="img/about.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
+      <h2 class="headline headline-2 section-title" id="tag-label">
+        <span class="span">Outros Linguagens</span>
+      </h2>
 
+      <p class="section-text">
+        Aqui a baixo está algumas linguagens na qual tive o prazer de trabalhar em alguns projetos, são linguagens em que atuei em projetos distintos.
+      </p>
 
-        <!-- Facts Start -->
-        <div class="container-xxl bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                        <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">3</h1>
-                        <p class="text-white mb-0">Anos de experiência</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-users-cog fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">34</h1>
-                        <p class="text-white mb-0">Sites Completos</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">47</h1>
-                        <p class="text-white mb-0">Clientes Satisfeito</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                        <i class="fa fa-check fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">42</h1>
-                        <p class="text-white mb-0">Projetos Completos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Facts End -->
+      <ul class="grid-list-1">
 
+        <li>
+          <button class="card tag-btn">
+            <img src="./assets/images/tag9.png" width="32" height="32" loading="lazy" alt="Travel">
 
-        <!-- Service Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Serviços<span></span></p>
-                    <h1 class="text-center mb-5">Quais soluções ofereço</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-search fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Otimização do código</h5>
-                            <p class="m-0">aplicar um conjunto de heurísticas para detectar tais seqüências e substituí-las por outras que removam as situações de ineficiência.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p class="m-0">É responsável tanto pelo projeto estético de um site quanto por seu projeto funcional.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Social Media Marketing</h5>
-                            <p class="m-0">É uma forma de marketing na internet que envolve a criação e o compartilhamento de anúncios e conteúdo em redes.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-mail-bulk fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Portifólios</h5>
-                            <p class="m-0">Compilação de amostras de serviços ou produtos, projetos profissionais e outras conquistas, serve para exibir as habilidades e o estilo de trabalho da pessoa.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-thumbs-up fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Logotipos</h5>
-                            <p class="m-0">É uma representação gráfica de uma marca ou empresa..</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-android fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Sites Responsivos</h5>
-                            <p class="m-0">São aqueles que adaptam o tamanho das suas páginas (alteração do layout) ao tamanho das telas que estão sendo exibidos, como as telas de celulares e tablets.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
+            <p class="btn-text">PHP</p>
+          </button>
+        </li>
 
+        <li>
+          <button class="card tag-btn">
+            <img src="./assets/images/tag10.png" width="32" height="32" loading="lazy" alt="Culture">
 
-        <!-- Newsletter Start -->
-        <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Entre em Contato<span></span></p>
-                        <h1 class="text-center text-white mb-4">Vamos tirar sua idea do papel?</h1>
-                        <p class="text-white mb-4">Entender o que sua ideia precisa para se realizar e como você pode chegar lá é o ponto-chave.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter End -->
+            <p class="btn-text">Laravel</p>
+          </button>
+        </li>
 
+        <li>
+          <button class="card tag-btn">
+            <img src="./assets/images/tag7.png" width="32" height="32" loading="lazy" alt="Lifestyle">
 
-        <!-- Projects Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Alguns projetos meus<span></span></p>
-                    <h1 class="text-center mb-5">Projetos concluídos recentemente</h1>
-                </div>
-                
-                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-12 text-center">
-                        <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="mx-2 active" data-filter="*">Todos</li>
-                            <li class="mx-2" data-filter=".first">Programador</li>
-                            <li class="mx-2" data-filter=".second">Design Gráfico</li>
-                        </ul>
-                    </div>
-                </div>
+            <p class="btn-text">Python</p>
+          </button>
+        </li>
 
+      </ul>
 
-                <div class="row g-4 portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Tourest/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Tourest - Site de viagens</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-1.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-1.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Desinic/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Desinic - Agência</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-2.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-2.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Tourtly/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Tourly - Agência de viagens</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-3.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-3.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Ridex/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Ridex - Site de aluguel</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-4.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-4.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Sceo-Master/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">SCEO - SEO Agency website</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-5.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-5.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Web-Site-Restaurante/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Grilli - Site do restaurante</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-9.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-9.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.behance.net/gallery/163985373/Logotipos"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Designer</p>
-                                <h5 class="lh-base mb-0">Logotipos</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-10.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-10.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.behance.net/gallery/172002217/Ilustracoes"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Designer</p>
-                                <h5 class="lh-base mb-0">Ilustrações</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-11.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-11.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://www.behance.net/portfolio/editor?project_id=172001583"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Designer</p>
-                                <h5 class="lh-base mb-0">Banners</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-7.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-7.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Micro-Master/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Micro - Site de podcast</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-8.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-8.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Funel-Agency/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Funel - Agency landing page</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/desktop-6.png" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/desktop-6.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="https://ichumbo.github.io/Landing-page-Audio/"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">Web Site</p>
-                                <h5 class="lh-base mb-0">Pod - Audio streaming</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Projects End -->
-
-
-        <!-- Team Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Estudos<span></span></p>
-                    <h1 class="text-center mb-5">Cursos & Certificados</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src=".jpg" alt="">
-                                <h5>Front-End</h5>
-                                <span>Especializações</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="fab fa-html5"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="fab fa-css3-alt"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="fab fa-js"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="fab fa-sass"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="fab fa-bootstrap"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="fab fa-wordpress"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src=".jpg" alt="">
-                                <h5>Designer Gráfico</h5>
-                                <span>Especializações</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="lab la-behance"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="lab la-adobe"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/details/certifications/"><i class="las la-pepper-hot"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src=".jpg" alt="">
-                                <h5>Graduação</h5>
-                                <span>Cursando</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/"><i class="las la-laptop-code"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.linkedin.com/in/ichumbo/"><i class="las la-network-wired"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Endereço<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Rua Arnódio dos Santos, Queimados, RJ.</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+55 21 97718-8050</p>
-                        <p><i class="fa fa-envelope me-3"></i>contato.ichumbo@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/IanMelw"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/ichumbo"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/ichumbo/"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Link rápido<span></span></p>
-                        <a class="btn btn-link" href="/about.html">Sobre Mim</a>
-                        <a class="btn btn-link" href="/contact.html">Contato</a>
-                        <a class="btn btn-link" href="https://www.linkedin.com/in/ichumbo/">Política de Privacidade</a>
-                        <a class="btn btn-link" href="https://www.linkedin.com/in/ichumbo/">Termos e Condições</a>
-                        <a class="btn btn-link" href="https://www.linkedin.com/in/ichumbo/">Carreira</a>
-                    </div>
-        
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Contato<span></span></p>
-                        <p>Entre em contato comigo pelo número: <br> (21) 9 77180-8050</p>
-                        <div class="position-relative w-100 mt-3">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">iChumbo</a>, Todos os direitos reservados. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="#">Home</a>
-                                <a href="https://www.linkedin.com/in/ichumbo/">Cookies</a>
-                                <a href="https://www.linkedin.com/in/ichumbo/">Help</a>
-                                <a href="https://www.linkedin.com/in/ichumbo/">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+  </section>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" target="_blank" class="logo">
+              <img src="./assets/images/logo.png" width="140" height="37" loading="lazy" alt="Wren logo">
+            </a>
+
+            <p class="footer-text">
+              Estou sempre curioso para aprender novas habilidades, ferramentas e conceitos. Além de trabalhar em vários projetos, trabalhei com equipes criativas, o que envolve reuniões diárias e comunicações, controle de fontes e gerenciamento de projetos.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; Desenvolvido por <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="copyright-link">iChumbo.</a>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.linkedin.com/in/ichumbo/" target="_blank" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://twitter.com/IanMelw" target="_blank" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+
+                <span class="span">Twitter</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/ichumbo" target="_blank" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+
+                <span class="span">Github</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/ichumbo/" target="_blank" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+
+                <span class="span">Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>

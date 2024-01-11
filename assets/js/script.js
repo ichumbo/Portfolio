@@ -1,105 +1,113 @@
 'use strict';
 
+
+
 /**
- * element toggle function
+ * Add event listener on multiple elements
  */
 
-const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const addEventOnElements = function (elements, eventType, callback) {
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
+  }
+}
 
 
 
 /**
- * header sticky & go to top
+ * MOBILE NAVBAR TOGGLER
+ */
+
+const navbar = document.querySelector("[data-navbar]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+
+const toggleNav = () => {
+  navbar.classList.toggle("active");
+  document.body.classList.toggle("nav-active");
+}
+
+addEventOnElements(navTogglers, "click", toggleNav);
+
+
+
+/**
+ * HEADER ANIMATION
+ * When scrolled donw to 100px header will be active
  */
 
 const header = document.querySelector("[data-header]");
-const goTopBtn = document.querySelector("[data-go-top]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-window.addEventListener("scroll", function () {
-
-  if (window.scrollY >= 10) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
     header.classList.add("active");
-    goTopBtn.classList.add("active");
+    backTopBtn.classList.add("active");
   } else {
     header.classList.remove("active");
-    goTopBtn.classList.remove("active");
+    backTopBtn.classList.remove("active");
   }
-
 });
 
 
 
 /**
- * navbar toggle
+ * SLIDER
  */
 
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-const navbar = document.querySelector("[data-navbar]");
+const slider = document.querySelector("[data-slider]");
+const sliderContainer = document.querySelector("[data-slider-container]");
+const sliderPrevBtn = document.querySelector("[data-slider-prev]");
+const sliderNextBtn = document.querySelector("[data-slider-next]");
 
-navToggleBtn.addEventListener("click", function () {
+let totalSliderVisibleItems = Number(getComputedStyle(slider).getPropertyValue("--slider-items"));
+let totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
 
-  elemToggleFunc(navToggleBtn);
-  elemToggleFunc(navbar);
-  elemToggleFunc(document.body);
+let currentSlidePos = 0;
 
-});
-
-
-
-/**
- * skills toggle
- */
-
-const toggleBtnBox = document.querySelector("[data-toggle-box]");
-const toggleBtns = document.querySelectorAll("[data-toggle-btn]");
-const skillsBox = document.querySelector("[data-skills-box]");
-
-for (let i = 0; i < toggleBtns.length; i++) {
-  toggleBtns[i].addEventListener("click", function () {
-
-    elemToggleFunc(toggleBtnBox);
-    for (let i = 0; i < toggleBtns.length; i++) { elemToggleFunc(toggleBtns[i]); }
-    elemToggleFunc(skillsBox);
-
-  });
+const moveSliderItem = function () {
+  sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
 }
 
-
-
 /**
- * dark & light theme toggle
+ * NEXT SLIDE
  */
 
-const themeToggleBtn = document.querySelector("[data-theme-btn]");
+const slideNext = function () {
+  const slideEnd = currentSlidePos >= totalSlidableItems;
 
-themeToggleBtn.addEventListener("click", function () {
-
-  elemToggleFunc(themeToggleBtn);
-
-  if (themeToggleBtn.classList.contains("active")) {
-    document.body.classList.remove("dark_theme");
-    document.body.classList.add("light_theme");
-
-    localStorage.setItem("theme", "light_theme");
+  if (slideEnd) {
+    currentSlidePos = 0;
   } else {
-    document.body.classList.add("dark_theme");
-    document.body.classList.remove("light_theme");
-
-    localStorage.setItem("theme", "dark_theme");
+    currentSlidePos++;
   }
 
-});
+  moveSliderItem();
+}
+
+sliderNextBtn.addEventListener("click", slideNext);
 
 /**
- * check & apply last time selected theme from localStorage
+ * PREVIOUS SLIDE
  */
 
-if (localStorage.getItem("theme") === "light_theme") {
-  themeToggleBtn.classList.add("active");
-  document.body.classList.remove("dark_theme");
-  document.body.classList.add("light_theme");
-} else {
-  themeToggleBtn.classList.remove("active");
-  document.body.classList.remove("light_theme");
-  document.body.classList.add("dark_theme");
+const slidePrev = function () {
+  if (currentSlidePos <= 0) {
+    currentSlidePos = totalSlidableItems;
+  } else {
+    currentSlidePos--;
+  }
+
+  moveSliderItem();
 }
+
+sliderPrevBtn.addEventListener("click", slidePrev);
+
+/**
+ * RESPONSIVE
+ */
+window.addEventListener("resize", function () {
+  totalSliderVisibleItems = Number(getComputedStyle(slider).getPropertyValue("--slider-items"));
+  totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+
+  moveSliderItem();
+});
