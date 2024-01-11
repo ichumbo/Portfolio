@@ -19,7 +19,7 @@
 
 ### Demonstração
 
-![Ridex Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Ridex Desktop Demo](./readme-images/ichumbo.png "Desktop Demo")
 
 
 ### Contato
