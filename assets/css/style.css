@@ -22,23 +22,23 @@
 
   /** Background colors */
   --bg-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-  --bg-carolina-blue: hsla(199, 89%, 49%, 1);
+  --bg-carolina-blue: #F4F6FF;
   --bg-prussian-blue: hsla(216, 33%, 20%, 1);
-  --bg-oxford-blue: hsla(222, 44%, 13%, 1);
-  --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+  --bg-oxford-blue: #1b1b1b;
+  --bg-oxford-blue-2: #111111;
 
   /** Text colors */
   --text-white: hsla(0, 0%, 100%, 1);
-  --text-alice-blue: hsla(216, 100%, 95%, 1);
-  --text-columbia-blue: hsla(199, 69%, 84%, 1);
-  --text-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-  --text-carolina-blue: hsla(199, 89%, 49%, 1);
-  --text-shadow-blue: hsla(217, 24%, 59%, 1);
-  --text-slate-gray: hsla(217, 17%, 48%, 1);
+  --text-alice-blue: hsla(0, 0%, 100%, 1);
+  --text-columbia-blue: #F4F6FF;
+  --text-wild-blue-yonder: hsl(180, 1%, 38%);
+  --text-carolina-blue: #F4F6FF;
+  --text-shadow-blue: #F4F6FF;
+  --text-slate-gray: #F4F6FF;
 
   /** Gradient colors */
-  --gradient-1: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
-  --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
+  --gradient-1: linear-gradient(hsl(206, 4%, 24%), hsl(206, 4%, 8%));;
+  --gradient-2: linear-gradient(hsl(206, 4%, 24%), hsl(206, 4%, 8%));
   --gradient-3: linear-gradient(0deg, #000d1a, transparent);
 
   /** Border colors */
@@ -246,7 +246,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .btn {
-  background-image: var(--gradient-2);
+  background-color: #1606fc;
   background-size: 200%;
   background-position: left;
   color: var(--white);
@@ -259,7 +259,7 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.btn:is(:hover, :focus-visible) { background-position: right; }
+.btn:is(:hover, :focus-visible) { background-color: hsl(206, 4%, 8%);; }
 
 .btn-primary {
   padding: 8px 16px;
@@ -275,7 +275,6 @@ body.nav-active { overflow: hidden; }
 
 .card {
   background-color: var(--bg-oxford-blue);
-  border: 1px solid var(--border-prussian-blue);
 }
 
 .img-holder {
@@ -345,8 +344,7 @@ body.nav-active { overflow: hidden; }
 
 .header.active {
   padding-block: 8px;
-  box-shadow: var(--shadow-1);
-  border-block-end: 1px solid var(--bg-prussian-blue);
+  box-shadow: 0 8px 20px 0 hsl(0deg 0% 0% / 15%);
   animation: slideIn 0.5s ease forwards;
 }
 
@@ -464,15 +462,15 @@ body.nav-active { overflow: hidden; }
 
 .hero .hero-text { margin-block-end: 40px; }
 
-.hero .input-wrapper:hover { box-shadow: var(--shadow-2); }
+.hero .input-wrapper:hover { box-shadow: 0px 3px 20px hsl(180deg 1.75% 22.59% / 25%); }
 
 .hero .input-wrapper {
   position: relative;
   padding: 10px;
   padding-inline-start: 20px;
-  background-color: var(--bg-prussian-blue);
+  background-color: hsl(0deg 0% 5.66%);
   border-radius: var(--radius-6);
-  border: 1px solid var(--bg-carolina-blue);
+  border: 1px solid #292929;
   display: flex;
   justify-items: flex-end;
   transition: var(--transition-1);
@@ -541,12 +539,13 @@ body.nav-active { overflow: hidden; }
   height: 32px;
   display: grid;
   place-items: center;
-  background: var(--bg-prussian-blue);
+  background-color: #1606fc;
   border-radius: var(--radius-circle);
   color: var(--white);
 }
 
-.btn-icon:is(:hover, :focus-visible) { background: var(--gradient-1); }
+.btn-icon:is(:hover, :focus-visible) { background-color: hsl(206, 4%, 8%); 
+transition: ease 0.3s;}
 
 .slider {
   --slider-items: 1;
@@ -681,7 +680,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .tag-btn:is(:hover, :focus-visible) {
-  box-shadow: var(--shadow-2);
+  box-shadow: 1px 1px 19px 0px hsl(0deg 0.65% 20.49% / 20%);
   background-image: linear-gradient(var(--bg-oxford-blue), var(--bg-oxford-blue)), var(--gradient-1);
   background-clip: padding-box, border-box;
   border-color: transparent;
@@ -1077,16 +1076,19 @@ body.nav-active { overflow: hidden; }
     display: block;
     position: absolute;
     pointer-events: none;
+    filter: grayscale(100%);
   }
 
   .hero-bg-1 {
     top: 80px;
     left: 0;
+    filter: grayscale(100%);
   }
 
   .hero-bg-2 {
     bottom: -200px;
     left: -20px;
+    filter: grayscale(100%);
   }
 
   .shape-2 { left: 60px; }
